@@ -7363,7 +7363,7 @@ void fc_write_final_gene_results(fc_thread_global_context_t * global_context, in
 			double double_res = 0;
 			int is_double_number = calc_float_fraction(gene_columns[i_files + column_names->numOfElements*xk1], &longlong_res, &double_res);
 			if(is_double_number){
-				fprintf(fp_out,"\t%.2f", double_res);
+				fprintf(fp_out,"\t%.6f", double_res);
 			}else{
 				#ifdef __MINGW32__
 				fprintf(fp_out,"\t%I64u", (srInt_64)longlong_res);
@@ -7496,7 +7496,7 @@ void fc_write_final_results(fc_thread_global_context_t * global_context, const c
 			double double_res = 0;
 			int is_double_number = calc_float_fraction(count_frac_raw, &longlong_res, &double_res);
 			if(is_double_number){
-				fprintf(fp_out,"\t%.2f", double_res);
+				fprintf(fp_out,"\t%.6f", double_res);
 			}else{
 				#ifdef __MINGW32__
 				fprintf(fp_out,"\t%I64d", (srInt_64)longlong_res);
